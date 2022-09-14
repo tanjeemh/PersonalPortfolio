@@ -1,0 +1,149 @@
+<!--Tanjeem Hossain - Website Portfolio -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Tanjeem Hossain</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Tanjeem and welcome to my portfolio! I use this platform to 
+              log my career and give anyone who is interested a chance to learn about me!
+            </p>
+            <p>
+              My favourite hobbies include anything basketball related, music, and technology.
+              I support the Toronto Raptors, but my favourite player is LeBron James. I love 
+              a wide variety of music ranging from Hijp-Hop to RnB, and my favourite artist of
+              all time would have to be JAY-Z. Growing up I was always fascinated with technology
+              and learning how it all works. Once I was introducted to various coding languages and
+              all the different things I could do, I fell in love with programming! This passion is what
+              has brought me to the University of Waterloo! I am a 2nd year Management Engineering student in my 
+              third study term.
+            </p>
+            <p>
+              I
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg"
+            alt="A photo of me!"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>My first ever computer program! Turtles Race!</h3>
+          </summary>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg"
+            alt="Turtle Racing Game. My first self-developed computer program that I made using Python. Not the most advanced code, however always gives me 
+            nostalga, serving as a bookmark to dipslay my growth as a programmer"
+            class="project-image"
+          />
+          <h4>What and Why</h4>
+          <p class="project-description">
+            •	Demonstrated both front-end/back-end programming procedures through use of internal and external Python libraries
+            •	Demonstrated leap in problem-solving skills using conditional statements and knowledge of basic data structures
+            • Utilized Object-Oriented Programming to streamline methods and functions, resulting in user-friendly navigation 
+              difficulty and increased efficiency
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Time Management System</h3>
+          </summary>
+          <img
+            src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb"
+            alt="Originally made for students who want to organize themselves! Beginner tech friendly and easy to navigate! No 
+            limit on the amount or types of events needed to be added to your schedule! Also check out our finance tracker for advice on how
+            to be smart with money through representation of advanced data analytics."
+            class="project-image"
+          />
+          <h4>What and Why</h4>
+          <p class="project-description">
+            •	Provides students a platform to input scheduled events and 
+            deadlines to manage their time, through implementation of a variety of algorithms and macros
+            •	Part of a successful 4-person team working in a fast-paced environment
+            •	Calculating Labour Productivity Index yielded a 5% decrease in procrastination ratios for users
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Graphical User Interface</h3>
+          </summary>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png"
+            alt="Created a button that is clickable by the user, and the computer will keep track of how many times the button is hit."
+            class="project-image"
+          />
+          <p class="project-description">
+            •	Demonstrates the ability to recognize unnecessary design elements, consistently create connections 
+              between contrasting forms of creative design
+            •	Developed expertise in Java OOP, inspired creation of AI programming
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-python"></i>
+          <i class="fab fa-java"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Inspiration from Codecademy's Ada Lovelace</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "31-07-2003";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
+
+
